@@ -14,7 +14,7 @@ export default new Router({
     routes:[
         { 
         path:'/', 
-        name:Home,
+        name:"Home",
         component:Home
     },
     { 
@@ -24,27 +24,27 @@ export default new Router({
     },
     { 
         path:'/sports', 
-        name: Sports,
+        name: "Sports",
         component:Sports
     },
     { 
         path:'/animals', 
-        name: Animals,
+        name: "Animals",
         component:Animals
     },
     { 
         path:'/emotions', 
-        name: Emotions,
+        name: "Emotions",
         component:Emotions
     },
     { 
         path:'/cartoons', 
-        name: Cartoons,
+        name: "Cartoons",
         component:Cartoons
     },
     { 
         path:'/search', 
-        name: Search,
+        name: "Search",
         component:Search
     }
 

@@ -1,13 +1,22 @@
 <template>
   <v-container class="pt-16 container" >
       <h1># Search Gifs</h1>
-                <input type="text" 
-                name="search" 
-                id="search" 
-                v-model="query" 
-                v-on:keyup="findGifs" 
-                placeholder="search here for your favorite GIF..."
-                class="mt-4 pb-2 pt-2 pl-2">
+        <div class="search d-flex ">
+            <v-row align="center" justify="center">
+                <v-col cols="8">
+                <input type="text" name="search" id="search" v-model="query"  placeholder="search here for your favorite GIF..." class="mt-4 pb-2 pt-2 pl-2"  style="width:100%">
+                </v-col>
+            </v-row>
+                <v-row align="center" justify="right">
+                <v-col cols="2">
+                    <v-btn v-on:click="findGifs" width="100" dark>
+                        <v-icon>
+                            {{seacrhIcon}}
+                        </v-icon>
+                    </v-btn>
+                    </v-col>
+            </v-row>
+                </div>
       <div v-if="gifs" class="gif-content">
                 <div v-for="gif in gifs" v-bind:key="gif.url.id" class="gif">
                         <v-img :src="gif.images.original.url" alt="image" class="m-2"/>
@@ -18,12 +27,13 @@
 
 <script>
 import axios from 'axios';
-export default {
+import { mdiMagnify } from '@mdi/js';export default {
     name:"Search",
     data(){ 
         return{
             gifs:[],
-            query:""
+            query:"",
+            seacrhIcon: mdiMagnify 
             
            
         }

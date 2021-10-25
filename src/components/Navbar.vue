@@ -1,6 +1,6 @@
 <template>
   <nav class="nav">
-    <v-toolbar  app min-width='100%' class='grey darken-4'>
+    <v-toolbar   min-width='100%' class='grey darken-4'>
         <router-link to='/'>
           <v-img  class="ml-4" max-height="100" max-width="150" :src="require('../assets/logo.png')" /> 
           </router-link>
